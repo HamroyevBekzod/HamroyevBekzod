@@ -41,15 +41,20 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ['picture', 'title', 'about', 'vidio']
 
 @admin.register(Level)
-class LevelAdmin(admin.Model.Admin):
+class LevelAdmin(admin.ModelAdmin):
     fields = (
-        'lider',
+        'image',
+        'title',
+        'reading',
+        'listening',
+        'writing',
+        'speaking'
     )    
 
-    list_display = ['lider']
+    list_display = ['title']
 
 @admin.register(Students)
-class StudentsAdmin(admin.Model.Admin):
+class StudentsAdmin(admin.ModelAdmin):
     fields = (
         'fullname',
         'email',
@@ -59,10 +64,10 @@ class StudentsAdmin(admin.Model.Admin):
         'stu_day',
     )    
 
-    list_display = ['fullname', 'email', 'number', 'extnmber', 'day', 'stu_day']
+    list_display = ['fullname', 'email', 'number', 'day', 'stu_day']
 
 @admin.register(Contact)
-class ContactAdmin(admin.Model.Admin):
+class ContactAdmin(admin.ModelAdmin):
     fields = (
         'tel_nomer',
         'email',
